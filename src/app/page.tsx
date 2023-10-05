@@ -15,7 +15,7 @@ export default async function Home() {
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center">
           <h1  className="text-5xl mr-3 font-semibold">
-          Ask Your PDF!
+          Ask Your PDF
           </h1> 
         <UserButton afterSignOutUrl="/"/>
         </div>
