@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import FileUpload from "@/components/ui/FileUpload";
 import { UserButton, auth } from "@clerk/nextjs";
 import Link from "next/link";
 import { LogIn } from "lucide-react";
@@ -15,7 +16,7 @@ export default async function Home() {
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center">
           <h1  className="text-5xl mr-3 font-semibold">
-          Ask Your PDF!
+          Ask Your PDF
           </h1> 
         <UserButton afterSignOutUrl="/"/>
         </div>
@@ -25,7 +26,9 @@ export default async function Home() {
         <p  className="max-w-xl mt-1 text-lg text-slate-600 text-center">
         Join a community of students, researchers, and professionals who are leveraging AI to ask their questions on AskYourPDF </p>
         <div className="w-full mt-4">
-          {isAuth ? (<h1>fileupload</h1>) : (
+          {isAuth ? (
+           <FileUpload />
+           ) : (
             <Link href='/sign-in'>
             <Button className="items-center">
               Login to get Started
